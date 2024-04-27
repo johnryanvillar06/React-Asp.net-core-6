@@ -1,15 +1,16 @@
-
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginForm from './LoginForm';
+import Dashboard from './Dashboard';
 
 function App() {
   return (
-    <div className="App">
-     <div className= "content">
-      <h1>
-        App componetn
-      </h1>
-     </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginForm />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
 }
 
